@@ -1,6 +1,6 @@
 {% set name = "perl-scalar-list-utils" %}
-{% set version = "1.63" %}
-{% set sha256 = "cafbdf212f6827dc9a0dd3b57b6ee50e860586d7198228a33262d55c559eb2a9" %}
+{% set version = "1.65" %}
+{% set sha256 = "ddc10e6c410ba35374f69365df4c66e32784352bd3cd88a8ad020e41f47a80c4" %}
 
 package:
   name: {{ name }}
@@ -23,7 +23,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
+    - {{ stdlib("m2w64_c") }}    # [win]
     - make
   host:
     - perl
