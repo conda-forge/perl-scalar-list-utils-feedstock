@@ -1,6 +1,6 @@
 {% set name = "perl-scalar-list-utils" %}
-{% set version = "1.68" %}
-{% set sha256 = "23317e4346fe8747f0167eccd1881d6369aa71023f014cd6f846988843295906" %}
+{% set version = "1.69" %}
+{% set sha256 = "49108037dc31ba4953aa8be57c1c72f3e922dde1fa328f1eb39a329f1e6314fc" %}
 
 package:
   name: {{ name }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   # nothing provides perl >=5.32.1,<6.0a0 *_perl5 needed by perl-extutils-makemaker-7.36-pl5321hd8ed1ab_0
   skip: true  # [win]
   script:
